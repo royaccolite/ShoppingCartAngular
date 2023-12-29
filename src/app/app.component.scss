@@ -1,0 +1,15 @@
+$fontSize: 24px;
+
+.wrapper {
+    font-size: $fontSize;
+}
+
+mat-form-field {
+    margin-top: 20px;
+  }
+  
+  button[color="primary"] {
+    background-color: #1976d2; 
+    color: white;
+  }
+  

@@ -1,0 +1,21 @@
+<mat-form-field>
+  <input matInput placeholder="Search products..." [(ngModel)]="searchTerm" (input)="handleSearch(searchTerm)" />
+</mat-form-field>
+
+<!-- Display filtered products -->
+<div *ngIf="filteredProducts.length > 0">
+  <h3>Search Results</h3>
+  <ul>
+    <li *ngFor="let product of filteredProducts">
+      {{ product.model }} - {{ product.launchYear }} - {{ product.price | currency }}
+    </li>
+  </ul>
+</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Welcome to Ammazon</mat-card-title>
+    </mat-card-header>
+</mat-card>
+<app-product></app-product>
+<app-contact-us></app-contact-us>
+
